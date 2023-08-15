@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1>Here are your responses{{survey.title}}</h1>
+{% for number in range(survey.questions|length)%}
+<h3>{{survey.questions[number].question}}</h3> 
+<p>{{responses[number]["answer"]}}</p>
+<p>{{responses[number]["comment"]}}</p>
+
+{% endfor %}
+
+<h1>Thank you</h1>
+<form action="/">
+    <button>Back to main Page</button>
+</form>
+{% endblock %}

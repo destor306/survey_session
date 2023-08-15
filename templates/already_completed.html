@@ -1,0 +1,9 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<h1>You've already surveyed this survey</h1>
+<p>Do you want to reset the survey?</p>
+<form action="/reset">
+    <button>Reset</button>    
+</form>
+{% endblock %}
